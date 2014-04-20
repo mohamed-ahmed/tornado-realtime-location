@@ -1,0 +1,12 @@
+<div class="message-wrapper">
+	<div class="message " id="m{{ message["id"] }}">{% module linkify(message["body"]) %}</div>
+	<div class="date" >{% module linkify(message["date"]) %}</div>
+	<img class="img" src="http://maps.googleapis.com/maps/api/staticmap?center=
+		{% module linkify(message["latitude"]) %},
+		{% module linkify(message["longitude"]) %}
+		&zoom=14&size=900x200&sensor=false
+		&markers=color:blue%7Clabel:S%7C 
+		{% module linkify(message["latitude"]) %},
+		{% module linkify(message["longitude"]) %}"
+		>
+</div>
